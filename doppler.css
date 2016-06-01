@@ -14,7 +14,14 @@ h1 {
   text-align: center;
 }
 
-.circleIdle {
+#reply {
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+  width: 60%;
+}
+
+.circleIdle, .circle {
   display: block;
   position: absolute;
   background: #ffff33;
@@ -23,10 +30,35 @@ h1 {
   height: 20px;
 }
 
+.arrow {
+  display: inline-block;
+  margin-top: -10px;
+  width: 100px;
+}
+
+.tail {
+  display: block;
+  margin-top: -13px;
+  margin-left: 25px;
+  width: 50px;
+  height: 5px;
+  background: #ffff33;
+  float: left;
+}
+
+.head {
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 40px solid #ffff33;
+  float: right;
+}
+
 .observer {
   display: block;
   margin-left: 50%;
-
   width: 10%;
 }
 
@@ -60,10 +92,13 @@ p.yellow:before {
 }
 
 #red {
-  margin-top: 10%;
   text-align: center;
 }
 
+.redDoppler {
+  position: relative;
+  margin-top: 10%;
+}
 .idle {
   position: absolute;
   top: 40%;
@@ -71,7 +106,7 @@ p.yellow:before {
   width: 40px;
 }
 
-.readOutsIdle {
+.readOutsIdle, .readOutsActive {
   display: block;
   width: 300px;
   margin-left: -100px;
@@ -86,6 +121,30 @@ p.yellow:before {
   animation: box 6s infinite ease-out;
 }
 
+.rectRightActive {
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  border: 1px solid black;
+  float: right;
+  animation: boxRed 6s infinite ease-out;
+}
+
+.right {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  width: 40px;
+}
+
+.light, .light:before, .light:after {
+  display: block;
+  border-radius: 2px;
+  width: 2px;
+  height: 2px;
+  animation: waves 6s infinite ease-out;
+}
+
 .lightIdle, .lightIdle:before, .lightIdle:after {
   display: block;
   border-radius: 2px;
@@ -94,7 +153,7 @@ p.yellow:before {
   animation: waves 6s infinite ease-out;
 }
 
-.lightIdle {
+.lightIdle, .light {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -112,6 +171,20 @@ p.yellow:before {
 
 .lightIdle:after {
   animation-delay: 1s;
+}
+
+.light:before {
+  content: "";
+  position: absolute;
+  animation-delay: 0.5s;
+  left: 15px;
+}
+
+.light:after {
+  content: "";
+  position: absolute;
+  animation-delay: 1s;
+  left: 30px;
 }
 
 @keyframes waves {
@@ -139,4 +212,10 @@ p.yellow:before {
   0% {background-color: transparent;}
   50% {background-color: transparent;}
   80% {background-color: #ffff33;}
+}
+
+@keyframes boxRed {
+  0% {background-color: transparent;}
+  50% {background-color: transparent;}
+  80% {background-color: #0000ff;}
 }
