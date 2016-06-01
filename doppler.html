@@ -5,6 +5,7 @@
   <link rel="stylesheet" type="text/css" href="doppler.css">
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
   <title>Doppler</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
   </div>
 
   <div id="intro">
-    <h3>A light source's wavelength determines it's color.</h3>
+    <h3>Welcome!  Did you know that a light source's wavelength determines it's color.</h3>
     <div class="idle">
       <div class="readOutsIdle">
         <div class="rectRightIdle"></div>
@@ -23,18 +24,21 @@
     </div>
     <div class="observer">
       <p class="yellow">Ooh, what a beautiful shade of yellow...I probably shouldn't be staring into the sun</p>
-      <img src="http://www.physicsexperiment.co.uk/content/img/doppler.gif" class="chris" alt="">
+      <img src="http://www.physicsexperiment.co.uk/content/img/doppler.gif" class="chris" alt=""><p>C.A. Doppler</p>
     </div>
+    <button id="next">Next</button>
   </div>
 
   <div id="red">
-    <h3>If the light source is approaching, the observer perceives a color shift to the _______ end of the spectrum.</h3>
-    <p><input type="text" id="shift" value="red or blue?"></p>
-    <button onclick="shiftAnswer()">Enter</button>
+    <h3>However, if the light source is approaching, the observer perceives a color shift to the <text id="answer">_______</text> end of the spectrum.</h3>
+    <p id="redInput"><input type="text" id="shift" value="red or blue?">
+      <button onclick="shiftAnswer()">Enter</button>
+    </p>
+
     <p id="reply">
 
-      <div class="right">
-        <div class="readOutsActive">
+      <div id="right">
+        <div id="readOutsActive">
           <div class="rectRightActive"></div>
         </div>
         <span class="light"></span>
@@ -44,14 +48,28 @@
           <span class="tail"></span>
         </div>
       </div>
-      <div class="redDoppler">
+      <div id="redDoppler">
         <div class="observer">
-          <p class="yellow">Whoa, did anyone else just see that blue shift?</p>
+          <p class="yellow">Whoa, did anyone else just see that blue shift? I should name that effect after myself!</p>
           <img src="http://www.physicsexperiment.co.uk/content/img/doppler.gif" class="chris" alt="">
         </div>
+        <button id="last">Next</button>
       </div>
 
     </p>
+  </div>
+  <div id="final">
+    <h3>That, in a nutshell, is the Doppler effect!  Now use you new found knowledge of color <br>
+    to calculate the age of the universe.  Easy!
+    </h3>
+    <h2> Key points to grasp</h5>
+    <p>1) Light has wave-like properties, and color is determined by wavelength</p>
+    <p>2) If a light source approaches an observer, the wavelength is perceived to be compressed (higher frequency) resulting in a blue shift</p>
+    <p>3) If moving away from an observer, the wavelength is elongated (lower frequency), and a shift to the red end of the spectrum is observed</p>
+    <div class="observer">
+      <p class="yellow">Hoozah!  Thank you for learning MY effect</p>
+      <img src="http://www.physicsexperiment.co.uk/content/img/doppler.gif" class="chris" alt="">
+    </div>
   </div>
   <script src="doppler.js"></script>
 </body>

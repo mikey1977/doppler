@@ -7,14 +7,16 @@ h1 {
   text-align: center;
   color: #def;
   font-family: Lobster;
+  font-size: 50px;
 }
 
 h3 {
   font-family: Open Sans;
+  color: #ffcc00;
 }
 
 #intro {
-  display: none;
+  display: block;
   text-align: center;
 }
 
@@ -69,6 +71,11 @@ h3 {
   width: 10%;
 }
 
+.observer p{
+  color: #ffcc00;
+  font-weight: bold;
+}
+
 .chris {
   margin-top: 45%;
   width: 100%;
@@ -100,11 +107,12 @@ p.yellow:before {
 
 #red {
   text-align: center;
+  display: none;
 }
 
-.redDoppler {
-  position: relative;
-  margin-top: 10%;
+#redDoppler {
+  display: none;
+
 }
 .idle {
   position: absolute;
@@ -113,8 +121,14 @@ p.yellow:before {
   width: 40px;
 }
 
-.readOutsIdle, .readOutsActive {
+.readOutsIdle {
   display: block;
+  width: 300px;
+  margin-left: -100px;
+}
+
+#readOutsActive {
+  display: none;
   width: 300px;
   margin-left: -100px;
 }
@@ -134,14 +148,22 @@ p.yellow:before {
   height: 20px;
   border: 1px solid black;
   float: right;
-  animation: boxRed 6s infinite ease-out;
+  animation: boxBlue 6s infinite ease-out;
 }
 
-.right {
+#right {
+  display: none;
   position: absolute;
   top: 70%;
   left: 30%;
   width: 40px;
+}
+
+#final {
+  display: none;
+  color: #ffcc00;
+  text-align: center;
+  font-family: Open Sans;
 }
 
 .light, .light:before, .light:after {
@@ -221,8 +243,9 @@ p.yellow:before {
   80% {background-color: #ffff33;}
 }
 
-@keyframes boxRed {
+@keyframes boxBlue {
   0% {background-color: transparent;}
   50% {background-color: transparent;}
   80% {background-color: #0000ff;}
 }
+
