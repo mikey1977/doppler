@@ -9,6 +9,10 @@ h1 {
   font-family: Lobster;
 }
 
+h3 {
+  font-family: Open Sans;
+}
+
 #intro {
   display: none;
   text-align: center;
@@ -19,6 +23,9 @@ h1 {
   margin: auto;
   padding-top: 20px;
   width: 60%;
+  font-family: Open Sans;
+  font-weight: bold;
+  color: #ffcc00;
 }
 
 .circleIdle, .circle {
