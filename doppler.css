@@ -6,4 +6,108 @@ body {
 h1 {
   text-align: center;
   color: #def;
+  font-family: Lobster;
+}
+
+#intro {
+  display: block;
+  text-align: center;
+}
+
+.circleIdle {
+  display: block;
+  position: absolute;
+  background: #ffff33;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.observer {
+  display: block;
+  margin-left: 50%;
+
+  width: 10%;
+}
+
+.chris {
+  margin-top: 50%;
+  width: 100%;
+}
+
+.idle {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  width: 40px;
+}
+
+.readOutsIdle {
+  display: block;
+  width: 300px;
+  margin-left: -100px;
+}
+
+.rectRightIdle {
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  border: 1px solid black;
+  float: right;
+  animation: box 6s infinite ease-out;
+}
+
+.lightIdle, .lightIdle:before, .lightIdle:after {
+  display: block;
+  border-radius: 2px;
+  width: 2px;
+  height: 2px;
+  animation: waves 6s infinite ease-out;
+}
+
+.lightIdle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: -1;
+}
+
+.lightIdle:before, .lightIdle:after {
+  position: absolute;
+  content: "";
+}
+
+.lightIdle:before {
+  animation-delay: .5s;
+}
+
+.lightIdle:after {
+  animation-delay: 1s;
+}
+
+@keyframes waves {
+  0%  {
+    box-shadow:0 0 0 0 transparent,
+               0 0 0 0 transparent,
+               0 0 0 0 transparent,
+               0 0 0 0 transparent;
+  }
+  15%  {
+    box-shadow:0 0 0 0 #0099ff,
+               0 0 0 0 transparent,
+               0 0 0 0 #0099ff,
+               0 0 0 0 rgba(255, 255, 102, 1);
+  }
+  100% {
+    box-shadow:0 0 40px 2px #0099ff,
+               0 0 10px 20px transparent,
+               0 0 30px 220px #0099ff,
+               0 0 5px 230px transparent;
+  }
+}
+
+@keyframes box {
+  0% {background-color: transparent;}
+  50% {background-color: transparent;}
+  80% {background-color: #ffff33;}
 }
