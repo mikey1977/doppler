@@ -10,7 +10,7 @@ h1 {
 }
 
 #intro {
-  display: block;
+  display: none;
   text-align: center;
 }
 
@@ -31,8 +31,37 @@ h1 {
 }
 
 .chris {
-  margin-top: 50%;
+  margin-top: 45%;
   width: 100%;
+}
+
+p.yellow {
+  margin: auto;
+  font-size: 0.6em;
+  font-weight: bold;
+  color: #000;
+  position: relative;
+  width: 100px;
+  height: 60px;
+  text-align: center;
+  line-height: 15px;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+
+p.yellow:before {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 60px;
+  border: 10px solid #fff;
+  border-color: #fff transparent transparent #fff;
+}
+
+#red {
+  margin-top: 10%;
+  text-align: center;
 }
 
 .idle {
